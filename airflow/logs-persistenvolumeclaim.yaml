@@ -6,7 +6,7 @@ metadata:
     app: airflow-k8s
 spec:
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
       storage: 512Mi
