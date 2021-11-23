@@ -34,18 +34,18 @@ spec:
           - name: requirements-configmap
             subPath: "requirements.txt"
             mountPath: "/requirements.txt"
-          - name: dags-host-volume
-            mountPath: /usr/local/airflow/dags
+#           - name: dags-host-volume
+#             mountPath: /usr/local/airflow/dags
           - name: logs-persistent-storage
             mountPath: /usr/local/airflow/logs
       volumes:
         - name: requirements-configmap
           configMap:
             name: requirements-configmap
-        - name: dags-host-volume
-          hostPath:
-            path: /mnt/airflow/dags
-            type: Directory
+#         - name: dags-host-volume
+#           hostPath:
+#             path: /mnt/airflow/dags
+#             type: Directory
         - name: logs-persistent-storage
           persistentVolumeClaim:
               claimName: airflow-logs-pvc
