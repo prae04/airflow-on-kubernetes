@@ -41,10 +41,10 @@ spec:
         - name: requirements-configmap
           configMap:
             name: requirements-configmap
-        - name: dags-host-volume
-          hostPath:
-            path: /mnt/airflow/dags
-            type: Directory
+#         - name: dags-host-volume
+#           hostPath:
+#             path: /mnt/airflow/dags
+#             type: Directory
         - name: logs-persistent-storage
           persistentVolumeClaim:
               claimName: airflow-logs-pvc
