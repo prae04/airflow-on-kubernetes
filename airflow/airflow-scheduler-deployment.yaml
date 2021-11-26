@@ -36,7 +36,7 @@ spec:
 #           - name: dags-host-volume
 #             mountPath: /usr/local/airflow/dags
           - name: logs-persistent-storage
-            mountPath: /usr/local/airflow/logs
+            mountPath: /usr/local/airflow/logs/scheduler
       volumes:
         - name: requirements-configmap
           configMap:
